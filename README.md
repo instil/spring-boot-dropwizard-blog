@@ -35,7 +35,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 public class HelloController {
-    @Timed(name = "Timer.index")
+    @Timed
     @RequestMapping("/")
     public String index() {
         return "Greetings from Spring Boot!";
@@ -81,24 +81,24 @@ localhost:8080/metrics
   "gc.ps_scavenge.time": 126,
   "gc.ps_marksweep.count": 1,
   "gc.ps_marksweep.time": 54,
-  "co.instil.HelloController.Timer.index.snapshot.75thPercentile": 0,
-  "co.instil.HelloController.Timer.index.snapshot.median": 0,
-  "co.instil.HelloController.Timer.index.snapshot.max": 8,
-  "co.instil.HelloController.Timer.index.fifteenMinuteRate": 0.004432121596082617,
-  "co.instil.HelloController.Timer.index.snapshot.mean": 1,
-  "co.instil.HelloController.Timer.index.meanRate": 0.26342740827887096,
-  "co.instil.HelloController.Timer.index.snapshot.95thPercentile": 8,
-  "co.instil.HelloController.Timer.index.oneMinuteRate": 0.06396446829654137,
-  "co.instil.HelloController.Timer.index.count": 7,
-  "co.instil.HelloController.Timer.index.snapshot.98thPercentile": 8,
+  "co.instil.HelloController.index.snapshot.75thPercentile": 0,
+  "co.instil.HelloController.index.snapshot.median": 0,
+  "co.instil.HelloController.index.snapshot.max": 8,
+  "co.instil.HelloController.index.fifteenMinuteRate": 0.004432121596082617,
+  "co.instil.HelloController.index.snapshot.mean": 1,
+  "co.instil.HelloController.index.meanRate": 0.26342740827887096,
+  "co.instil.HelloController.index.snapshot.95thPercentile": 8,
+  "co.instil.HelloController.index.oneMinuteRate": 0.06396446829654137,
+  "co.instil.HelloController.index.count": 7,
+  "co.instil.HelloController.index.snapshot.98thPercentile": 8,
   "gauge.response.metrics": 184,
-  "co.instil.HelloController.Timer.index.snapshot.999thPercentile": 8,
+  "co.instil.HelloController.index.snapshot.999thPercentile": 8,
   "gauge.response.root": 4,
   "counter.status.200.metrics": 1,
-  "co.instil.HelloController.Timer.index.snapshot.stdDev": 2,
+  "co.instil.HelloController.index.snapshot.stdDev": 2,
   "counter.status.200.root": 7,
-  "co.instil.HelloController.Timer.index.fiveMinuteRate": 0.013222836942706007,
-  "co.instil.HelloController.Timer.index.snapshot.min": 0,
-  "co.instil.HelloController.Timer.index.snapshot.99thPercentile": 8
+  "co.instil.HelloController.index.fiveMinuteRate": 0.013222836942706007,
+  "co.instil.HelloController.index.snapshot.min": 0,
+  "co.instil.HelloController.index.snapshot.99thPercentile": 8
 }
 ```

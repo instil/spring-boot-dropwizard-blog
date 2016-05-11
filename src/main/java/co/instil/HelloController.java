@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 public class HelloController {
-    @Timed(name = "Timer")
+    @Timed(name = "Timer.index")
     @RequestMapping("/")
     public String index() {
         return "Greetings from Spring Boot!";

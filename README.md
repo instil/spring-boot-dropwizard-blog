@@ -35,7 +35,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 public class HelloController {
-    @Timed
+    @Timed(name = "Timer.index")
     @RequestMapping("/")
     public String index() {
         return "Greetings from Spring Boot!";
@@ -56,19 +56,19 @@ localhost:8080/metrics
 ### Example metrics
 ```
 {
-  "mem": 657978,
-  "mem.free": 467910,
+  "mem": 657794,
+  "mem.free": 455872,
   "processors": 4,
-  "instance.uptime": 48465,
-  "uptime": 54666,
-  "systemload.average": 3.3994140625,
-  "heap.committed": 608768,
+  "instance.uptime": 25609,
+  "uptime": 32713,
+  "systemload.average": 2.64697265625,
+  "heap.committed": 609792,
   "heap.init": 131072,
-  "heap.used": 140857,
+  "heap.used": 153919,
   "heap": 1864192,
-  "nonheap.committed": 51008,
+  "nonheap.committed": 49344,
   "nonheap.init": 2496,
-  "nonheap.used": 49210,
+  "nonheap.used": 48002,
   "nonheap": 0,
   "threads.peak": 14,
   "threads.daemon": 4,
@@ -78,27 +78,27 @@ localhost:8080/metrics
   "classes.loaded": 6239,
   "classes.unloaded": 0,
   "gc.ps_scavenge.count": 9,
-  "gc.ps_scavenge.time": 117,
+  "gc.ps_scavenge.time": 126,
   "gc.ps_marksweep.count": 1,
-  "gc.ps_marksweep.time": 53,
-  "co.instil.HelloController.Timed.index.snapshot.99thPercentile": 60,
-  "co.instil.HelloController.Timed.index.snapshot.min": 0,
-  "co.instil.HelloController.Timed.index.snapshot.98thPercentile": 60,
-  "co.instil.HelloController.Timed.index.count": 8,
-  "co.instil.HelloController.Timed.index.snapshot.75thPercentile": 0,
-  "co.instil.HelloController.Timed.index.meanRate": 0.16182403613729707,
-  "co.instil.HelloController.Timed.index.snapshot.95thPercentile": 60,
-  "co.instil.HelloController.Timed.index.snapshot.999thPercentile": 60,
-  "co.instil.HelloController.Timed.index.snapshot.stdDev": 19,
-  "co.instil.HelloController.Timed.index.snapshot.max": 60,
-  "co.instil.HelloController.Timed.index.snapshot.mean": 7,
-  "gauge.response.metrics": 147,
+  "gc.ps_marksweep.time": 54,
+  "co.instil.HelloController.Timer.index.snapshot.75thPercentile": 0,
+  "co.instil.HelloController.Timer.index.snapshot.median": 0,
+  "co.instil.HelloController.Timer.index.snapshot.max": 8,
+  "co.instil.HelloController.Timer.index.fifteenMinuteRate": 0.004432121596082617,
+  "co.instil.HelloController.Timer.index.snapshot.mean": 1,
+  "co.instil.HelloController.Timer.index.meanRate": 0.26342740827887096,
+  "co.instil.HelloController.Timer.index.snapshot.95thPercentile": 8,
+  "co.instil.HelloController.Timer.index.oneMinuteRate": 0.06396446829654137,
+  "co.instil.HelloController.Timer.index.count": 7,
+  "co.instil.HelloController.Timer.index.snapshot.98thPercentile": 8,
+  "gauge.response.metrics": 184,
+  "co.instil.HelloController.Timer.index.snapshot.999thPercentile": 8,
+  "gauge.response.root": 4,
   "counter.status.200.metrics": 1,
-  "co.instil.HelloController.Timed.index.fifteenMinuteRate": 0,
-  "counter.status.200.root": 8,
-  "co.instil.HelloController.Timed.index.snapshot.median": 0,
-  "co.instil.HelloController.Timed.index.fiveMinuteRate": 0,
-  "co.instil.HelloController.Timed.index.oneMinuteRate": 0,
-  "gauge.response.root": 3
+  "co.instil.HelloController.Timer.index.snapshot.stdDev": 2,
+  "counter.status.200.root": 7,
+  "co.instil.HelloController.Timer.index.fiveMinuteRate": 0.013222836942706007,
+  "co.instil.HelloController.Timer.index.snapshot.min": 0,
+  "co.instil.HelloController.Timer.index.snapshot.99thPercentile": 8
 }
 ```
